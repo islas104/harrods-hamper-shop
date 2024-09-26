@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkharrods_hamper_shop=self.webpackChunkharrods_hamper_shop||[]).push([[74],{74:(s,e,r)=>{r.r(e),r.d(e,{default:()=>h});r(43);var d=r(579);const h=s=>{let{products:e,addToBasket:r}=s;return(0,d.jsxs)("div",{children:[(0,d.jsx)("h2",{children:"Products"}),(0,d.jsx)("ul",{children:e.map((s=>(0,d.jsxs)("li",{children:[s.title," - \xa3",s.price,(0,d.jsx)("button",{onClick:()=>r(s),children:"Add to Basket"})]},s.id)))})]})}}}]);
+//# sourceMappingURL=74.87155955.chunk.js.map
