@@ -7,17 +7,21 @@ const Basket = ({ basket, removeFromBasket, updateQuantity }) => (
     <h3>Your Basket</h3>
     <ul>
       {basket.map((item) => (
-        <li key={item.id}> 
-          {item.title} - £{item.price} x 
-          <input
-            type="number"
-            value={item.quantity}
-            onChange={(e) =>
-              updateQuantity(item.id, parseInt(e.target.value, 10))
-            }
-            min="1"
-          />
-          <button onClick={() => removeFromBasket(item.id)}>Remove</button>
+        <li key={item.id}>
+          {item.title} - £{item.price}
+          <div style={{ display: 'inline-block', marginLeft: '10px' }}>
+            <span>Quantity:</span>
+            <input
+              type="number"
+              value={item.quantity}
+              onChange={(e) =>
+                updateQuantity(item.id, parseInt(e.target.value, 10))
+              }
+              min="1"
+              style={{ marginLeft: '5px' }}
+            />
+          </div>
+          <button onClick={() => removeFromBasket(item.id)} style={{ marginLeft: '10px' }}>Remove</button>
         </li>
       ))}
     </ul>

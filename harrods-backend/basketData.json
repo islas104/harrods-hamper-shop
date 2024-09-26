@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Wine Collection",
+    "price": 100,
+    "stock": 5,
+    "quantity": 4
+  },
+  {
+    "id": 3,
+    "title": "Supreme Hamper",
+    "price": 200,
+    "stock": 2,
+    "quantity": 2
+  },
+  {
+    "id": 2,
+    "title": "Cheese Selection Hamper",
+    "price": 50,
+    "stock": 10,
+    "quantity": 1
+  },
+  {
+    "id": 5,
+    "title": "All You Can Eat Hamper",
+    "price": 250,
+    "stock": 3,
+    "quantity": 3
+  }
+]

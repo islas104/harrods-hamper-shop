@@ -61,12 +61,23 @@ A full-stack shopping basket application for Harrods hampers, built using React 
    npm install
    ```
 
-3. Start the frontend application:
+3. Install react-toastify for toast notifications:
 ```bash
-   npm start
+   npm install react-toastify
    ```
 
-4. The React app will run at http://localhost:3000.
+4. Install react-icons for polished UI icons:
+```bash
+   npm install react-icons
+   ```
+
+5. Start the React app:
+```bash
+    npm start
+   ```
+   
+6. The React app will run at http://localhost:3000.
+
 
 ## Running the Full Application
 
