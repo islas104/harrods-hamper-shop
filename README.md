@@ -1,91 +1,90 @@
-# Harrods Hamper Shop - Technical Test
+# Harrods Hamper Shop
 
-This project is a single-page application (SPA) that demonstrates a shopping basket functionality for Harrods hampers. Users can add products to their basket, adjust quantities, view the total, and proceed to purchase. This project was created as a proof of concept for the Harrods Digital Developer Technical Test.
+A full-stack shopping basket application for Harrods hampers, built using React for the frontend and Node.js with Express for the backend.
 
 ## Features
-- List of products fetched from a JSON file or an API endpoint.
-- Add products to the basket.
-- Remove products from the basket.
-- Adjust quantities of products in the basket.
-- Display total price for the basket.
-- Purchase functionality that writes the basket data to a file or API.
-- Responsive design using React and CSS to ensure a clean and elegant look.
 
-## Technologies Used
-- **React**: Frontend library for building the user interface.
-- **CSS**: For styling and layout.
-- **Express.js**: For backend API that handles purchase submissions.
-- **Node.js**: Server runtime for handling backend functionality.
+- **Product List View**: Displays a list of hampers available for purchase, each with a "Add to Basket" button.
+- **Basket Functionality**: 
+  - Users can add hampers to the basket, increase or decrease quantities, and remove hampers from the basket.
+  - The basket dynamically calculates the total price based on quantities.
+- **Purchase System**: 
+  - On "Purchase" click, the basket data is submitted to the backend and written to a file.
+  - A "Thank you" message is displayed after purchase.
+- **API Integration**: 
+  - Fetches product data from a provided API endpoint.
+  - Posts purchase data to the backend for storage.
+- **Responsive Design**: Styled with CSS for a polished, Harrods-like experience.
 
-## Project Structure
-The project consists of two main parts:
-1. **Frontend** (React SPA):
-   - Displays products.
-   - Handles user interactions with the basket.
-   - Allows the user to proceed with a purchase.
-   
-2. **Backend** (Express.js):
-   - Serves the product list.
-   - Receives purchase data and writes it to a file.
 
 ## Installation and Setup
 
 ### Prerequisites
-Make sure you have the following installed on your machine:
-- **Node.js** (version 14.x or later)
-- **npm** (comes with Node.js)
 
-### Getting Started
-1. **Clone the repository**:
+- [Node.js](https://nodejs.org/) installed on your machine.
+- [npm](https://www.npmjs.com/) for package management.
+
+### Backend Setup (Node.js)
+
+1. Navigate to the `harrods-backend` directory:
    ```bash
-   git clone https://github.com/yourusername/harrods-hamper-shop.git
-   cd harrods-hamper-shop
-    ```
+   cd harrods-backend
+   ```
+
+2. Install backend dependencies:
+```bash
+   npm install
+   ```
+
+3. 
+```bash
+   node server.js
+   ```
+
+4. Backend server will run at http://localhost:5001.
+
+## Frontend Setup (React)
+
+1. Navigate to the harrods-frontend directory:
+```bash
+   cd harrods-frontend
+   ```
 
 2. Install frontend dependencies:
 ```bash
-cd harrods-frontend
-npm install
-```
+   npm install
+   ```
 
-3. Install backend dependencies:
+3. Start the frontend application:
 ```bash
-cd ../harrods-backend
-npm install
-```
+   npm start
+   ```
 
-4. Start the frontend server:
-```bash
-cd ../harrods-frontend
-npm start
-```
+4. The React app will run at http://localhost:3000.
 
-The frontend will start running at http://localhost:3000.
+## Running the Full Application
 
-5. Start the backend server:
-```bash
-cd ../harrods-backend
-node server.js
-```
+1. Ensure both the backend and frontend are running:
 
-The backend will start running at http://localhost:5001.
+Backend: http://localhost:5001
+Frontend: http://localhost:3000
 
-## API Endpoints
-The backend provides the following API endpoints:
+2. Open http://localhost:3000 in your browser to view the application.
 
-GET /products: Fetches the list of products available for purchase.
-POST /purchase: Submits the purchase data.
+## Usage
+1. Adding Products to the Basket: Select products from the list on the left side and click "Add to Basket".
+2. Viewing the Basket: Products added to the basket will appear on the right side. You can update the quantity or remove items.
+3. Purchasing: Once you're satisfied with your selections, click the "Purchase" button. The basket data will be sent to the backend, and a confirmation will appear.
 
-## Running the Application
-1. After starting both the frontend and backend servers, you can access the application at http://localhost:3000.
-2. Add products to the basket, adjust quantities, and remove items.
-3. Click the Purchase button to finalize your order.
+## Dependencies
 
-## Known Issues and Limitations
-This is a proof-of-concept application with minimal validations.
-No real payment gateway is integrated.
+## Backend
+Express: Fast, unopinionated, minimalist web framework for Node.js.
+CORS: Middleware for enabling Cross-Origin Resource Sharing.
+Body-Parser: Node.js body parsing middleware for handling incoming request bodies.
 
-## Future Improvements
-Add product filtering and sorting.
-Integrate with a real API for product data and payments.
-Add unit and integration tests for both the frontend and backend.
+## Frontend 
+React: A JavaScript library for building user interfaces.
+HTML-Webpack-Plugin: A plugin that simplifies creation of HTML files to serve webpack bundles.
+
+
