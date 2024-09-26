@@ -84,21 +84,20 @@ Frontend: http://localhost:3000
 
 ## Dependencies
 
-## Backend
+### Backend
 Express: Fast, unopinionated, minimalist web framework for Node.js.
 CORS: Middleware for enabling Cross-Origin Resource Sharing.
 Helmet: Helps secure the app by setting various HTTP headers.
 Express-Rate-Limit: Basic rate-limiting middleware to prevent abuse.
 Body-Parser: Node.js body parsing middleware for handling incoming request bodies (built-in with Express as of v4.16.0).
 
-## Frontend 
+### Frontend 
 React: A JavaScript library for building user interfaces.
 PropTypes: Runtime type checking for React props.
 CSS: Custom styles for a polished UI experience.
 HTML-Webpack-Plugin: A plugin that simplifies creation of HTML files to serve webpack bundles (if using).
 
-# Optional Enhancements
-
+### Optional Enhancements
 React Toastify (Optional): For better feedback messages to the user.
 React-Icons (Optional): For using icons in the UI for a more polished look.
 
