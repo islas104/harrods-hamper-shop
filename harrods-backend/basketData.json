@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Wine Collection",
+    "price": 100,
+    "stock": 5,
+    "quantity": 1
+  },
+  {
+    "id": 2,
+    "title": "Cheese Selection Hamper",
+    "price": 50,
+    "stock": 10,
+    "quantity": 3
+  }
+]
