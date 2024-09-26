@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TechnicalTest-Hampers.Api</name>
+    </assembly>
+    <members>
+        <member name="M:TechnicalTest_Hampers.Api.Controllers.ProductsController.Get">
+            <summary>
+            Retrieve a set of Hampers products
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TechnicalTest_Hampers.Api.Controllers.ProductsController.SubmitOrder(System.Object)">
+            <summary>
+            Submit an order basket
+            </summary>
+            <param name="basketModel"></param>
+        </member>
+    </members>
+</doc>
