@@ -22,18 +22,6 @@ body {
   background-color: #f8f8f8;
 }
 
-h1 {
-  font-size: 2.8em;
-  color: #4a4a4a;
-  font-family: 'Playfair Display', serif;
-}
-
-h2 {
-  font-size: 2.2em;
-  margin-bottom: 15px;
-  color: #4a4a4a;
-}
-
 /* Shop container */
 .shop-container {
   display: flex;
@@ -53,8 +41,8 @@ ul {
 }
 
 ul li {
-  padding: 20px 0; /* Increased padding for more space between items */
-  margin-bottom: 20px; /* Added more space between each product */
+  padding: 20px 0;
+  margin-bottom: 20px;
   border-bottom: 2px solid #b5a57d;
   font-size: 1.3em;
   display: flex;
@@ -70,8 +58,9 @@ ul li button {
   cursor: pointer;
   border-radius: 5px;
   font-size: 1em;
-  margin-left: 20px; /* Added space between product text and button */
+  margin-left: 40px; 
 }
+
 
 ul li button:hover {
   background-color: #004d36;
@@ -84,10 +73,6 @@ ul li button:disabled {
 /* Basket styling */
 .basket-container {
   flex-basis: 60%;
-}
-
-.basket ul li {
-  font-size: 1.2em;
 }
 
 .basket ul li input {
@@ -103,7 +88,6 @@ ul li button:disabled {
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 5px;
-  font-size: 1em;
 }
 
 .basket ul li button:hover {
@@ -116,17 +100,9 @@ ul li button:disabled {
   color: #4a4a4a;
 }
 
-.basket p {
-  font-size: 1.1em;
-  color: #666;
-}
-
 /* Purchase button */
 .purchase-container {
   margin-top: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
 }
 
 button.purchase-btn {
@@ -144,19 +120,8 @@ button.purchase-btn:hover {
   background-color: #004d36;
 }
 
-/* Footer */
-footer {
-  background-color: #006747;
-  color: white;
-  padding: 15px;
-  margin-top: 20px;
-  text-align: center;
-  font-size: 1.1em;
-  border-top: 3px solid #b5a57d;
-}
-
 .harrods-logo {
-  width: 205px; /* Reduced width to make it smaller */
+  width: 250px; /* Reduce the width to make it smaller */
   height: auto;
   margin-bottom: 20px;
 }

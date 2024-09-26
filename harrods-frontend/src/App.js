@@ -12,13 +12,35 @@ const App = () => {
   const [products, setProducts] = useState([]);
   const [basket, setBasket] = useState([]);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
+  // Load products from API
   useEffect(() => {
-    fetch('/Products.json')
-      .then((response) => response.json())
-      .then((data) => setProducts(data.products))
-      .catch((err) => setError('Failed to load products.'));
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch('/Products.json');
+        const data = await response.json();
+        setProducts(data.products);
+        setLoading(false);
+      } catch (err) {
+        setError('Failed to load products.');
+        setLoading(false);
+      }
+    };
+    
+    fetchProducts();
   }, []);
+
+  // Load basket from localStorage
+  useEffect(() => {
+    const savedBasket = JSON.parse(localStorage.getItem('basket'));
+    if (savedBasket) setBasket(savedBasket);
+  }, []);
+
+  // Save basket to localStorage
+  useEffect(() => {
+    localStorage.setItem('basket', JSON.stringify(basket));
+  }, [basket]);
 
   const addToBasket = (product) => {
     const existingProduct = basket.find((item) => item.id === product.id);
@@ -55,26 +77,29 @@ const App = () => {
     }
   };
 
-  const handlePurchase = () => {
+  const handlePurchase = async () => {
     if (basket.length === 0) {
       alert('Your basket is empty.');
       return;
     }
 
-    fetch('http://localhost:5001/purchase', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(basket),
-    })
-      .then((response) => response.json())
-      .then(() => {
-        alert('Thank you for your purchase!');
-        setBasket([]);
-      })
-      .catch((error) => console.error('Error during purchase:', error));
+    try {
+      const response = await fetch('http://localhost:5001/purchase', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(basket),
+      });
+      if (!response.ok) throw new Error('Failed to make purchase');
+
+      alert('Thank you for your purchase!');
+      setBasket([]);
+    } catch (error) {
+      console.error('Error during purchase:', error);
+    }
   };
+
+  if (loading) return <p>Loading products...</p>;
+  if (error) return <p>{error}</p>;
 
   return (
     <div className="App">
@@ -83,7 +108,6 @@ const App = () => {
       </header>
       
       <div className="shop-container">
-        {error ? <p>{error}</p> : null}
         <ProductList products={products} addToBasket={addToBasket} />
         <div className="basket-container">
           <Basket
