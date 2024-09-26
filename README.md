@@ -97,7 +97,8 @@ PropTypes: Runtime type checking for React props.
 CSS: Custom styles for a polished UI experience.
 HTML-Webpack-Plugin: A plugin that simplifies creation of HTML files to serve webpack bundles (if using).
 
-## Optional Enhancements
+# Optional Enhancements
+
 React Toastify (Optional): For better feedback messages to the user.
 React-Icons (Optional): For using icons in the UI for a more polished look.
 
