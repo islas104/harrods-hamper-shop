@@ -36,7 +36,7 @@ A full-stack shopping basket application for Harrods hampers, built using React 
    npm install
    ```
 
-3. 
+3. Start the backend server:
 ```bash
    node server.js
    ```
