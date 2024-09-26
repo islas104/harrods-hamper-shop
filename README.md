@@ -49,6 +49,8 @@ A full-stack shopping basket application for Harrods hampers, built using React 
 
 4. Backend server will run at http://localhost:5001.
 
+5. All purchase data will be saved to basketData.json in the backend directory upon successful purchase.
+
 ## Frontend Setup (React)
 
 1. Navigate to the harrods-frontend directory:
